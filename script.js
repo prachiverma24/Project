@@ -1,73 +1,90 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
-
-// Function to move to the next slide
-function nextSlide() {
-    index = (index + 1) % totalSlides;
-    updateSlider();
-}
-
-// Function to update the slider position
-function updateSlider() {
-    const slideWidth = slides[0].clientWidth;
-    const sliderContainer = document.querySelector('.slides');
-    sliderContainer.style.transform = `translateX(${-index * slideWidth}px)`;
-}
-
-// Automatic slide transition every 5 seconds
-let slideInterval = setInterval(nextSlide, 5000);
-
-// Event listeners for the manual navigation buttons
-document.querySelector(".next").addEventListener("click", function () {
-    clearInterval(slideInterval);  // Stop automatic slide when manually navigating
-    nextSlide();
-    slideInterval = setInterval(nextSlide, 5000);  // Resume automatic slide after manual interaction
-});
-
-document.querySelector(".prev").addEventListener("click", function () {
-    clearInterval(slideInterval);  // Stop automatic slide when manually navigating
-    index = (index - 1 + totalSlides) % totalSlides;  // Move to the previous slide
-    updateSlider();
-    slideInterval = setInterval(nextSlide, 5000);  // Resume automatic slide after manual interaction
-});
-
-// Alert for Contact button
-document.querySelector(".contact-btn").addEventListener("click", function () {
-    alert("Called 106. Stay Calm Don't Panic.");
-});
-
-// Alert for Subscribe button
-document.querySelector("footer button").addEventListener("click", function () {
-    const emailInput = document.querySelector("footer input");
-    if (emailInput.value) {
-        alert(`Subscribed with email: ${emailInput.value}`);
-        emailInput.value = "";  // Clear the email input field
-    } else {
-        alert("Please enter a valid email!");
+document.addEventListener("DOMContentLoaded", function () {
+    let contactButton = document.querySelector(".contact-btn");
+    if (contactButton) {
+        contactButton.addEventListener("click", function () {
+            alert("Thank you for reaching out! Please check the FAQ before contacting us.");
+        });
     }
-});
+    let subscribeButton = document.querySelector(".subscribe-to-our-Newsletter button");
+    let emailInput = document.querySelector(".subscribe-to-our-Newsletter input");
 
-const faqQuestions = document.querySelectorAll('.faq-question');
+    if (subscribeButton && emailInput) {
+        subscribeButton.addEventListener("click", function () {
+            let email = emailInput.value.trim();
+            if (email === "") {
+                alert("Please enter a valid email address.");
+            } else {
+                alert(`Thank you for subscribing with: ${email}`);
+                emailInput.value = ""; 
+            }
+        });
+    }
 
-// Loop through all questions and add a click event listener
-faqQuestions.forEach((question) => {
-    question.addEventListener('click', function () {
-        // Find the next element (the answer) and toggle visibility
-        const answer = this.nextElementSibling;
+    
+    let darkMode = false;
+    let toggleButton = document.createElement("button");
+    toggleButton.innerText = "Toggle Dark Mode";
+    toggleButton.style.cssText = "position: fixed; bottom: 20px; right: 20px; padding: 10px 15px; background: grey; color: white; border: none; cursor: pointer; border-radius: 5px;";
+    
+    document.body.appendChild(toggleButton);
 
-        // Toggle the display of the answer
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
+    toggleButton.addEventListener("click", function () {
+        darkMode = !darkMode;
+
+        if (darkMode) {
+            document.body.style.backgroundColor = "#222";
+            document.body.style.color = "white";
+
+            
+            document.querySelectorAll("header, main, footer, .faq-section, .customization, .footer-container").forEach(section => {
+                if (!section.classList.contains("contact-section")) { 
+                    section.style.backgroundColor = "#333";
+                    section.style.color = "white";
+                }
+            });
+
+            
+            document.querySelectorAll("a").forEach(link => {
+                link.style.color = "#bbb";
+            });
+
+            
+            document.querySelectorAll("input, button").forEach(el => {
+                if (!el.closest(".subscribe-to-our-Newsletter") && !el.classList.contains("contact-btn")) {
+                    el.style.backgroundColor = "#444";
+                    el.style.color = "white";
+                    el.style.border = "1px solid #666";
+                }
+            });
+
+            toggleButton.style.background = "white";
+            toggleButton.style.color = "black";
         } else {
-            answer.style.display = "block";
+            document.body.style.backgroundColor = "";
+            document.body.style.color = "";
+
+            
+            document.querySelectorAll("header, main, footer, .faq-section, .customization, .footer-container").forEach(section => {
+                section.style.backgroundColor = "";
+                section.style.color = "";
+            });
+
+        
+            document.querySelectorAll("a").forEach(link => {
+                link.style.color = "";
+            });
+
+            
+            document.querySelectorAll("input, button").forEach(el => {
+                if (!el.closest(".subscribe-to-our-Newsletter") && !el.classList.contains("contact-btn")) {
+                    el.style.backgroundColor = "";
+                    el.style.color = "";
+                    el.style.border = "";
+                }
+            });
+
+            toggleButton.style.background = "black";
+            toggleButton.style.color = "white";
         }
     });
-});
-document.querySelector(".view-btn").addEventListener("mouseover", function () {
-    document.getElementById("custom-alert").style.display = "flex";
-});
-
-document.getElementById("close-alert").addEventListener("click", function () {
-    document.getElementById("custom-alert").style.display = "none";
 });
