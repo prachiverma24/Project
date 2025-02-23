@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmergentAid - First Aid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">EmergentAid</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">FAQ</a>
+        <a href="#">About</a>
+        <button class="contact-btn">Emergency Call</button>
+    </nav>
+  </header>  
+
+  <main>
+    <!-- Slider Section -->
+    <section class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="emergency-isometric_1284-25291.avif" alt="emergency">
+                <div class="overlay">
+                    <h1>Preparedness Saves Lives</h1>
+                    <p>Access our resources and tips to prepare for emergencies.</p>
+                    <button class="view-btn">View Tips</button>
+                </div>
+                
+                <!-- Custom Modal for the Alert -->
+                <div id="custom-alert" class="custom-alert">
+                    <div class="alert-content">
+                        <p>Access our resources and tips to prepare for emergencies.</p>
+                        <a href="https://www.ready.gov" target="_blank">Visit Ready.gov</a>
+                        <button id="close-alert">Close</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="slide">
+                <img src="image2.jpeg" alt="Emergency meeting">
+                <div class="overlay">
+                    <h1>Be  Ready for Anything</h1>
+                    <p>Stay informed and keep your loved ones safe.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="emergenc assistant .jpg" alt="Emergency meeting">
+                <div class="overlay">
+                    <h1>Be Ready for Anything</h1>
+                    <p>Stay informed and keep your loved ones safe.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image.jpg" alt="Emergency meeting">
+                <div class="overlay">
+                    <h1>Be Ready for Anything</h1>
+                    <p>Stay informed and keep your loved ones safe.</p>
+                </div>
+            </div>
+        </div>
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </section>
+
+    <!-- FAQ Section -->
+    <div class="faq-item">
+        <div class="faq-question">How can I prepare for Natural Disasters?</div>
+        <div class="faq-answer">You can prepare by creating an emergency kit with water, food, a flashlight, and a first-aid kit. Have an evacuation plan ready for your family.</div>
+    </div>
+    
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+        <div class="faq-question">What should I include in a first aid kit?</div>
+        <div class="faq-answer">A first-aid kit should include bandages, antiseptic wipes, adhesive tape, tweezers, pain relievers, and a thermometer.</div>
+    </div>
+    
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+        <div class="faq-question">What is the best way to stay informed during an emergency?</div>
+        <div class="faq-answer">Stay informed by tuning in to local news, having a weather radio, and signing up for emergency alerts on your phone.</div>
+    </div>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Client Feedback</h2>
+            <div class="testimonials-container">
+                <div class="testimonial">
+                    <p>"EmergencyAid was a lifesaver! Quick response and great service."</p>
+                    <h4>Himani Sharma</h4>
+                </div>
+                <div class="testimonial">
+                    <p>Thanks to EmergencyAid, we were able to manage the situation without panic. Truly a lifesaver!"</p>
+                </p>
+                    <h4>Prachi Verma</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Quick, reliable, and professional. They truly made a difference in a time of need."</p>
+                    <h4>Anchal Thankur</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Highly recommend! They truly understand emergency preparedness."</p>
+                    <h4>Harshdeep Kaur</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-tips">
+        <div class="container">
+            <h2>Emergency Preparedness Tips</h2>
+            <ul>
+                <li data-tooltip="Emergency Number: 106">Keep emergency phone numbers handy.</li>
+                <li data-tooltip="Store enough water and food to last at least 72 hours.">Store water and non-perishable food.</li>
+                <li data-tooltip="A well-stocked first-aid kit can be a lifesaver.">Have a first-aid kit.</li>
+            </ul>
+        </div>
+    </section>
+    
+  </main>
+
+  <!-- Footer Section -->
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <div>
+                <h4>Emergency Services</h4>
+                <ul>
+                    <li data-tooltip="Get quick first-aid assistance.">First Aid</li>
+                    <li data-tooltip="Find disaster relief services.">Disaster Relief</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li data-tooltip="Reach us for any help.">Contact</li>
+                    <li data-tooltip="Find answers to common questions.">FAQ</li>
+                </ul>
+            </div>
+            <div class="subscribe-container">
+                <h4>Subscribe</h4>
+                <input type="email" placeholder="Enter email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
