@@ -3,117 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - EmergAid</title>
+    <title>EmergentAid - Contact Us</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo">EmergAid</div>
-            <nav>
+    <!--Navigation -->
+    <header>
+       <div class="logo">EmergencyAid</div>
+       <nav> 
+        <button><a href="#">FAQ</a></button>
+        <button>
+        <class="contact-btn">ContactUs</button>
+        </nav>
+        </header>
+        <!--contact form section-->
+        <section class="Contact-Container">
+            <h1>Get in Touch</h1>
+            <p>Reach out for immediate assistance.</p>
+            <form id="contactForm">
+            <label>Name</label>       
+            <input type="text" id="name" placeholder="Enter your name"required>
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email"required>
+            <label>Message</label>
+            <textarea id="message" placeholder="Type your message" required></textarea>
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I accept the Terms</label>
+            </div>
+            <button type="submit" class="submit-btn">Submit </button>
+           </form>
+        </form>
+    </section>
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h2>Emergency Services</h2>
+            <ul>
+                <li><a href="#">First Aid</a></li>
+                <li><a href="#">Disaster Relief</a></li>
+                <li><a href="#">Medical Transport</a></li>
+            </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#contact us"></a></li>
-                    <li><a href="#">Home</a></li>
+               <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>   
+                <li><a href="#">About Us</a></lI>
                 </ul>
-                <button class="contact-btn">Contact Us</button>
-            </nav>
+                </div>
+             <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Emergency Tips</a></li>
+                    <li><a href="#">Preparedness Guide</a></li>
+                    <li><a href="#">Safety Checklist</a></li>
+                </ul>
+            </div>
+            <div class="footer-section newsletter"></div>
+           <h3>Subscribe to our newsletter</h3>
+           <p>Stay up-to-date with latest energency preparedness tips and news from EmergentAid.</p>
+         
         </div>
+           <div class="footer-bottom">
+           <p>@ 2025 EmergentAid. All rights reserved.</p>
+            <a href="#">Terms and Conditions</a>
+           <a href="#"> Privacy Policy</a>
+           </div> 
+           </footer>
+     <script src="script.js"></script>
+    </body>
+    </html>
+    </section>
+    </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br><br>
-    <main>
-        <section class="faq-section">
-            <h1>FAQ</h1>
-            <P><i>This page will address common question and concerns related to emergency situations.<br> it will provide clear and concise answers to frequently asked question.<br> offering guidline and support for various emergency scenarios. The FAQ page will aim to empower users with imformation.</i></P>
-        </section>
-        <section class="customization">
-            <h2>Start customizing this page. :Use this AI toolkit to create a mobile-friendly website.</h2>
-            
-            <div class="features">
-                <div class="feature-card">
-                    <img src="customise-your-computer-hero.jpg" alt="Customize your page">
-                    <h3>Customize your page</h3>
-                    <p>Use drag & drop editor to edit your page.</p>
-                    <div class="popup">Easily personalize your website!</div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="1.png" alt="Generate new section with AI">
-                    <h3>Generate new section with AI</h3>
-                    <p>Get a ready-to-use section with unique content.</p>
-                    <div class="popup">AI-generated sections with unique content.</div>
-                </div>
-            
-                <div class="feature-card">
-                    <img src="2.jpeg" alt="Generate your content with AI">
-                    <h3>Generate your content with AI</h3>
-                    <p>Create engaging texts and visually appealing images.</p>
-                    <div class="popup">Use AI to craft content and images!</div>
-                </div>
-            </div>
-            
-        </section>
-        
-     
-    
-        <main>
-          <footer>
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h4>Emergency Services</h4>
-                    <ul>
-                        <li>First Aid</li>
-                        <li>Disaster Relief</li>
-                        <li>Medical Transport</li>
-                    </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Quick Link</h4>
-                        <ul>
-                            <li><a href="#">contact us</a></li>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li>Emergency Tips</li>
-                            <li>Preparedness Guide</li>
-                            <li>Safety Checklist</li>
-                        </ul>
-                    </div>
-                    <div class="subscribe-to-our-Newsletter">
-                        <h4>subscribe to our Newsletter</h4>
-                        <p>stay up to date with the latest emergency Preparedness tips and news form EmergenAid.</p>
-                        <input type="email" placeholder="Enter your Email">
-                        <button>subscribe</button>
-                    </div>
-                </div>
-                <br>
-                <hr>
-                <br>
-                <div class="footer-bottom">
-                    <p>© 2025 EmergenAid. All rights reserved.</p>
-                    <a href="#">Terms and Conditions</a>
-                    <a href="#">Privacy Policy</a>
-                    <div class="social-icons">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-linkedin"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                    </div>
-                </div>
-                
-            </div>
-          </footer>
-        </main>
-    </main>
-    <script src="script.js"></script>
-</body>
-</html>
+  </body>
+  </html>
